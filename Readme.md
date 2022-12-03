@@ -2,7 +2,7 @@
 
 
 * Студент: [Рита Пак](https://up.htmlacademy.ru/adaptive/27/user/2171091).
-* Наставник: [Александр Карташов] (https://htmlacademy.ru/profile/id77080).
+* Наставник: [Александр Карташов](https://htmlacademy.ru/profile/id77080).
 
 ---
 
