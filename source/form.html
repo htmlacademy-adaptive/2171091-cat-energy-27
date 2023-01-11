@@ -7,14 +7,14 @@
 </head>
 
 <body class="page__body">
-  <header class="form-header">
-    <a class="form-header__logo">
-      <img class="form-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="логотип кэт энерджи.">
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img class="header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="логотип кэт энерджи.">
     </a>
-    <nav class="form-nav">
-      <button class="form-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="form-nav__wrapper">
-        <ul class="form-nav__list site-list">
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
@@ -32,7 +32,6 @@
     <h1 class="form-container__header">Подбор программы</h1>
     <p class="form-container__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <form class="feedback" action="https://echo.htmlacademy.ru/courses" method="get">
-    <div class="feedback__wrapper">
       <fieldset class="feedback__fieldset">
         <legend class="visually-hidden">Данные питомца</legend>
         <label class="feedback__label" for="name">Имя:*</label>
@@ -68,7 +67,6 @@
           </li>
         </ul>
       </fieldset>
-    </div>
       <fieldset class="feedback__fieldset">
         <legend class="feedback__legend">Контактные данные (владельца кота)</legend>
         <label class="feedback__label" for="e-mail">E-mail:*</label>
@@ -85,7 +83,8 @@
         <ul class="feedback__list">
           <li class="feedback__item">
             <label class="control">
-              <input class="visually-hidden control__input" type="checkbox" name="purpose" value="sugar-substitute" checked>
+              <input class="visually-hidden control__input" type="checkbox" name="purpose" value="sugar-substitute"
+                checked>
               <span class="control__checkbox"></span>
               <span class="control__label">Сахарозаменитель</span>
             </label>
@@ -126,9 +125,9 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
-  <footer class="form-footer">
-    <a class="form-footer__logo">Cat Energy</a>
-    <div class="form-footer__social social">
+  <footer class="footer">
+    <a class="footer__logo">Cat Energy</a>
+    <div class="footer__social social">
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
@@ -141,9 +140,11 @@
         </li>
       </ul>
     </div>
-    <div class="form-footer__copyright copyright">
-      <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    <div class="footer__copyright copyright">
+      <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">
+        <p>HTML Academy</p>
+        <svg>HTML Academy</svg>
+      </a>
     </div>
   </footer>
 </body>
