@@ -1,0 +1,61 @@
+.feedback__fieldset {
+  border: 0;
+}
+
+.feedback__legend {
+  color: var(--basic-black);
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  padding: 0;
+}
+
+.feedback__label {
+  color:  var(--basic-dark-grey);
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.feedback__input {
+  color:  var(--basic-dark-grey);
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  border: none;
+  outline: var(--input) 1px solid;
+
+  &:hover {
+    outline: var(--input-hover) 1px solid;
+  }
+
+  &:focus {
+    outline: var(--input-focus) 2px solid;
+  }
+
+  &:invalid {
+    outline: var(--input-error) 2px solid;
+  }
+}
+
+.feedback__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.feedback__item {
+  color: var(--basic-black);
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.feedback__required {
+  line-height: 16px;
+}

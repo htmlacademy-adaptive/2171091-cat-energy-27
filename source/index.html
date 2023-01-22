@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -29,21 +30,23 @@
     </nav>
   </header>
   <main class="main-container">
-    <h1 class="main-container__header">Функциональное питание для котов</h1>
-    <p class="main-container__text">Занялся собой? Займись котом!</p>
-    <img class="main-container__hero-product" src="img/index-can-mobile.png" width="280" height="270"
-      alt="cat energy pro со вкусом курицы.">
-    <a class="main-container__link button" href="form.html">Подбор программы</a>
+    <section class="hero">
+      <h1 class="hero__header">Функциональное питание для котов</h1>
+      <p class="hero__text">Занялся собой? Займись котом!</p>
+      <img class="hero__product" src="img/index-can-mobile.png" width="280" height="270"
+        alt="cat energy pro со вкусом курицы.">
+      <a class="hero__link button" href="form.html">Подобрать программу</a>
+    </section>
     <section class="product-line">
       <h2 class="visually-hidden">Продуктовые линейки</h2>
-      <ul>
+      <ul class="product-line__list">
         <li class="product-line__item">
           <h3 class="product-line__title">Похудение</h3>
           <p class="product-line__description">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
             поможет вашему питомцу сбросить лишний вес.
           </p>
-          <a class="product-line__link" href="catalog.html"></a>
+          <a class="product-line__link" href="catalog.html">Каталог Slim</a>
         </li>
         <li class="product-line__item">
           <h3 class="product-line__title">Набор массы</h3>
@@ -51,7 +54,7 @@
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
             необходимые мышцы!
           </p>
-          <a class="product-line__link" href="catalog.html"></a>
+          <a class="product-line__link" href="catalog.html">Каталог Pro</a>
         </li>
       </ul>
     </section>
@@ -82,7 +85,7 @@
     </section>
     <section class="example-of-usage">
       <h2 class="example-of-usage__title">Живой пример</h2>
-      <p class="example-of-usage__description">
+      <p class="example-of-usage__text">
         Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
         изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
       </p>
@@ -103,10 +106,10 @@
             затрачено времени
           </dd>
         </div>
+        <p class="example-of-usage__item stats-list__costs">
+          Затраты на питание:<br>15 000 руб.
+        </p>
       </dl>
-      <p class="example-of-usage__item stats-list__costs">
-        Затраты на питание:<br>15 000 руб.
-      </p>
       <div class="example-of-usage__picture slider">
         <img class="example-of-usage__before" src="img/cat-before.png" width="280" height="256"
           alt="пример кота до cat energy.">
@@ -148,9 +151,9 @@
       </ul>
     </div>
     <div class="footer__copyright copyright">
-      <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">
-        <p>HTML Academy</p>
-        <svg>HTML Academy</svg>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <p class="copyright__text">HTML Academy</p>
+        <svg class="copyright__logo">HTML Academy</svg>
       </a>
     </div>
   </footer>
