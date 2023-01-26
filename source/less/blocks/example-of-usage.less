@@ -8,6 +8,49 @@
   font-size: 36px;
   line-height: 40px;
   color: var(--basic-black);
+  margin: 0;
+  padding-bottom: 40px;
+  @media (min-width: @tablet-width) {
+    background-color: var(--basic-white);
+  }
+}
+
+.example-of-usage__text {
+  padding-bottom: 20px;
+  margin: 0;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 54px;
+    background-color: var(--basic-white);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 69px;
+    background-color: var(--special-grey);
+  }
+}
+
+.example-of-usage__list {
+  margin: 0;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.example-of-usage__wrapper {
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: @tablet-width) {
+    gap: 42px;
+  }
+}
+
+.example-of-usage__item {
+  text-align: center;
 }
 
 .example-of-usage__number {
@@ -17,10 +60,21 @@
   line-height: 24px;
   color: var(--basic-black);
   text-transform: uppercase;
-
 }
 
 .example-of-usage__description {
   font-size: 12px;
   line-height: 12px;
+  margin: 0;
+}
+
+.stats-list__costs {
+  @media (min-width: @tablet-width) {
+    text-align: right;
+    max-width: 130px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
 }

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,8 +32,10 @@
   </header>
   <main class="main-container">
     <section class="hero">
-      <h1 class="hero__header">Функциональное питание для котов</h1>
-      <p class="hero__text">Занялся собой? Займись котом!</p>
+      <div class="hero__wrapper">
+        <h1 class="hero__header">Функциональное питание для котов</h1>
+        <p class="hero__text">Занялся собой? Займись котом!</p>
+      </div>
       <img class="hero__product" src="img/index-can-mobile.png" width="280" height="270"
         alt="cat energy pro со вкусом курицы.">
       <a class="hero__link button" href="form.html">Подобрать программу</a>
@@ -90,24 +93,26 @@
         изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
       </p>
       <dl class="example-of-usage__list stats-list">
-        <div class="example-of-usage__item stats-list__weight">
-          <dt class="example-of-usage__number">
-            5 кг
-          </dt>
-          <dd class="example-of-usage__description">
-            снижение веса
-          </dd>
-        </div>
-        <div class="example-of-usage__item stats-list__time">
-          <dt class="example-of-usage__number">
-            60 дней
-          </dt>
-          <dd class="example-of-usage__description">
-            затрачено времени
-          </dd>
+        <div class="example-of-usage__wrapper">
+          <div class="example-of-usage__item stats-list__weight">
+            <dt class="example-of-usage__number">
+              5 кг
+            </dt>
+            <dd class="example-of-usage__description">
+              снижение веса
+            </dd>
+          </div>
+          <div class="example-of-usage__item stats-list__time">
+            <dt class="example-of-usage__number">
+              60 дней
+            </dt>
+            <dd class="example-of-usage__description">
+              затрачено времени
+            </dd>
+          </div>
         </div>
         <p class="example-of-usage__item stats-list__costs">
-          Затраты на питание:<br>15 000 руб.
+          Затраты на питание: 15 000 руб.
         </p>
       </dl>
       <div class="example-of-usage__picture slider">

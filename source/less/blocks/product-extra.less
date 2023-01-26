@@ -4,14 +4,27 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  margin: 0;
+  padding-top: 25px;
 }
 .product-extra__list {
   list-style-type: none;
+  margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-extra__item {
   outline: auto;
+  display: grid;
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .product-extra__name {
@@ -21,8 +34,21 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+  margin: 0;
+  padding-bottom: 13px;
 }
 
 .product-extra__features {
   line-height: 14px;
+  margin: 0;
+}
+
+.product-extra__button {
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3 / 3;
+  }
 }

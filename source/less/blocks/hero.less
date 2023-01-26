@@ -1,8 +1,38 @@
 .hero {
+  display: flex;
+  flex-direction: column;
   background-color: var(--basic-green);
   background-image: url("../img/index-background.png");
   background-repeat: no-repeat;
   background-size: contain;
+  margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    background-color: var(--basic-white);
+    background-image: none;
+    margin-bottom: 0;
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    background-color: var(--basic-white);
+    background-image: url("../img/index-background.png");
+    background-position: right;
+    margin-bottom: 82px;
+  }
+}
+
+.hero__wrapper {
+  @media (min-width: @tablet-width) {
+    max-width: 30%;
+    order: 0;
+  }
+  @media (min-width: @desktop-width) {
+    max-width: 40%;
+    order: 0;
+  }
 }
 
 .hero__header {
@@ -11,9 +41,23 @@
   font-size: 36px;
   line-height: 36px;
   text-align: center;
-  text-transform: uppercase;
   color: var(--basic-white);
-  padding: 27px 35px;
+  margin: 0;
+  padding: 27px 35px 25px;
+  @media (min-width: @tablet-width) {
+    color: var(--basic-black);
+    text-align: left;
+    max-width: 414px;
+    padding: 0;
+    padding-bottom: 41px;
+  }
+  @media (min-width: @desktop-width) {
+    color: var(--basic-black);
+    text-align: left;
+    max-width: 414px;
+    padding: 0;
+    padding-bottom: 40px;
+  }
 }
 
 .hero__text {
@@ -24,5 +68,42 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-white);
-  padding: 25px 35px;
+  margin: 0;
+  padding-bottom: 29px;
+  @media (min-width: @tablet-width) {
+    color: var(--basic-black);
+    text-align: left;
+    max-width: 414px;
+    padding-bottom: 20px;
+  }
+  @media (min-width: @desktop-width) {
+    color: var(--basic-black);
+    max-width: 414px;
+    padding-bottom: 52px;
+  }
+}
+
+.hero__product {
+  @media (min-width: @tablet-width) {
+    max-width: 709px;
+    order: 2;
+  }
+  @media (min-width: @desktop-width) {
+    max-width: 552px;
+    order: 2;
+  }
+}
+
+.hero__link {
+  align-self: flex-start;
+  max-width: 280px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 244px;
+    order: 1;
+  }
+  @media (min-width: @desktop-width) {
+    max-width: 244px;
+    order: 1;
+  }
 }
