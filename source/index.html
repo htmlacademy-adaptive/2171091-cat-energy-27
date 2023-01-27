@@ -13,12 +13,12 @@
     <a class="header__logo">
       <img class="header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="логотип кэт энерджи.">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--opened">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link">Главная</a>
+            <a class="site-list__link site-list__link--current">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Каталог продукции</a>
@@ -33,12 +33,17 @@
   <main class="main-container">
     <section class="hero">
       <div class="hero__wrapper">
-        <h1 class="hero__header">Функциональное питание для котов</h1>
+        <h1 class="hero__header">Функциональное<br> питание для котов</h1>
         <p class="hero__text">Занялся собой? Займись котом!</p>
       </div>
-      <img class="hero__product" src="img/index-can-mobile.png" width="280" height="270"
-        alt="cat energy pro со вкусом курицы.">
+      <picture class="hero__product">
+        <source media="(min-width: 1024px)" srcset="img/index-can-desktop.png" width="552" height="499">
+        <source media="(min-width: 768px)" srcset="img/index-can-tablet.png" width="709" height="609">
+        <img src="img/index-can-mobile.png" width="280" height="270"
+          alt="cat energy pro со вкусом курицы.">
+      </picture>
       <a class="hero__link button" href="form.html">Подобрать программу</a>
+
     </section>
     <section class="product-line">
       <h2 class="visually-hidden">Продуктовые линейки</h2>
@@ -92,51 +97,43 @@
         Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
         изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
       </p>
-      <dl class="example-of-usage__list stats-list">
-        <div class="example-of-usage__wrapper">
-          <div class="example-of-usage__item stats-list__weight">
-            <dt class="example-of-usage__number">
-              5 кг
-            </dt>
-            <dd class="example-of-usage__description">
-              снижение веса
-            </dd>
-          </div>
-          <div class="example-of-usage__item stats-list__time">
-            <dt class="example-of-usage__number">
-              60 дней
-            </dt>
-            <dd class="example-of-usage__description">
-              затрачено времени
-            </dd>
-          </div>
+      <div class="example-of-usage__stats">
+      <dl class="stats-list">
+        <div class="stats-list__item stats-list__weight">
+           <dt class="stats-list__number">
+             5 кг
+          </dt>
+          <dd class="stats-list__description">
+            снижение веса
+          </dd>
         </div>
-        <p class="example-of-usage__item stats-list__costs">
-          Затраты на питание: 15 000 руб.
-        </p>
+        <div class="stats-list__item stats-list__time">
+          <dt class="stats-list__number">
+             60 дней
+          </dt>
+          <dd class="stats-list__description">
+            затрачено времени
+          </dd>
+        </div>
       </dl>
+      <p class="stats-list__costs">
+       Затраты на питание: 15 000 руб.
+      </p>
+    </div>
       <div class="example-of-usage__picture slider">
-        <img class="example-of-usage__before" src="img/cat-before.png" width="280" height="256"
-          alt="пример кота до cat energy.">
-        <div class="example-of-usage__curtain curtain-slider">
-          <button class="curtain-slider__left-toggle" type="button">
-            <span class="visually-hidden">потянуть влево.</span>
-          </button>
-          <button class="curtain-slider__right-toggle" type="button">
-            <span class="visually-hidden">потянуть вправо.</span>
-          </button>
+        <img class="example-of-usage__before" src="img/cat-slider-tablet.png" width="560" height="512"
+          alt="пример кота до и после cat energy.">
         </div>
-        <img class="example-of-usage__after" src="img/cat-after.png" width="280" height="256"
-          alt="пример кота после cat energy.">
-      </div>
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-      <iframe
+      <div class="contacts__wrap">
+        <p class="contacts__text">Приглашаем к сотрудничеству<br> дилеров!</p>
+        <p class="contacts__address">ул. Большая Конюшенная<br><br> д. 19/8 Санкт-Петербург</p>
+      </div>
+      <iframe class="contacts__map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1671577007914!5m2!1sru!2sru"
-        width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+        width="100%" height="362" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>

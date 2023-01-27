@@ -7,7 +7,6 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -24,8 +23,12 @@
 
   .main-nav__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
   }
@@ -33,7 +36,7 @@
 
 @media (min-width: @desktop-width) {
   .main-nav__wrapper {
-    width: 960px;
+    max-width: 720px;
     margin: 0 auto;
   }
 
@@ -41,8 +44,105 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: center;
     font-size: 18px;
     line-height: 24px;
     max-width: 50%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 36px;
+  height: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--basic-white);
+
+  &:active::before,
+  &:active::after {
+    background-color: var(--basic-white);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: 36px;
+  height: 2px;
+  background-color: var(--basic-black);
+  box-shadow: 0 8px 0 0 var(--basic-black), 0 16px 0 0 var(--basic-black);
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(#000000, 30%);
+  box-shadow:
+    0 8px 0 0 fade(#000000, 30%),
+    0 16px 0 0 fade(#000000, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 24px;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 36px;
+    height: 2px;
+    background-color: var(--basic-black);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#000000, 30%);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    top: 59px;
+    left: 0;
+    z-index: 5;
+    background-color: var(--basic-white);
+    min-width: 320px;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
   }
 }
