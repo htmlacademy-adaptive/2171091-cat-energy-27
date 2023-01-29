@@ -19,10 +19,18 @@
 }
 
 .site-list__link--white {
+  text-decoration: none;
   color: var(--basic-white);
+  display: block;
+  text-align: center;
+  padding: 22px 69px 24px 69px;
+  font-size: 18px;
+  line-height: 24px;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
 }
 
-.site-list__link--white--current {
+.site-list__link--white + .site-list__link--current {
   border-bottom: solid 2px var(--basic-white);
 }
 
@@ -32,8 +40,7 @@
     margin: 0 auto;
   }
 
-  .site-list__link {
-    color: var(--basic-black);
+  .site-list__link, .site-list__link--white {
     padding: 0;
     border-top: none;
     border-bottom: none;
@@ -49,10 +56,6 @@
 @media (min-width: @desktop-width) {
   .site-list {
     max-width: 720px;
-  }
-
-  .site-list__link {
-    color: var(--basic-black);
   }
 
   .site-list__link--current {

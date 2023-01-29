@@ -1,0 +1,73 @@
+.user-contacts__list {
+  margin: 0;
+  padding: 35px 20px 23px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: stretch;
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+    padding: 76px 67px 65px 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 78px;
+    justify-content: flex-start;
+    padding: 76px 110px 67px 111px;
+  }
+}
+
+.user-contacts__item {
+  flex-grow: 1;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 20px;
+  }
+}
+
+.user-contacts__label {
+  color: var(--basic-dark-grey);
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.user-contacts__input {
+  flex-grow: 1;
+  color: var(--basic-dark-grey);
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  border: none;
+  padding: 14px 15px 13px 15px;
+  outline: var(--input) 1px solid;
+
+  &:hover {
+    outline: var(--input-hover) 1px solid;
+  }
+
+  &:focus {
+    outline: var(--input-focus) 2px solid;
+  }
+
+  &:invalid {
+    outline: var(--input-error) 2px solid;
+  }
+}

@@ -6,19 +6,14 @@
   background-size: cover;
   position: relative;
   z-index: 0;
-  width: 280px;
-  height: 289px;
 
   @media (min-width: @tablet-width) {
     margin-top: 69px;
-    width: 707px;
-    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
-    width: 245px;
-    height: 289px;
+    max-width: 245px;
   }
 }
 
@@ -27,20 +22,35 @@
   content: "";
   opacity: 85%;
   background-color: var(--basic-green);
-  min-width: 280px;
-  min-height: 289px;
+  min-width: 100%;
+  min-height: 100%;
   left: 0;
   top: 0;
   z-index: -1;
+}
+
+.gift::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/icon-gift.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 38%;
+  top: 30%;
+  width: 78px;
+  height: 80px;
+  z-index: -1;
 
   @media (min-width: @tablet-width) {
-    min-width: 720px;
-    min-height: 200px;
+    width: 80px;
+    height: 82px;
+    left: 10%;
+    top: 30%;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 245px;
-    min-height: 289px;
+    left: 38%;
+    top: 30%;
   }
 }
 
@@ -56,9 +66,11 @@
 
   @media (min-width: @tablet-width) {
     padding: 71px 124px 69px 422px;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {
     padding: 184px 40px 42px;
+    text-align: center;
   }
 }

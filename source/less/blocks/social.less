@@ -2,6 +2,12 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 24px;
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -20,19 +26,22 @@
 
 .social__link {
   text-decoration: none;
-  color: var(--basic-dark-grey);
+}
 
-  &:focus {
-    fill: var(--basic-green);
-    outline: none;
-  }
+.social__logo {
+  fill: var(--social-logo);
+}
 
-  &:hover {
-    fill: var(--basic-green);
-  }
+.social__logo:hover {
+  fill: var(--basic-green);
+}
 
-  &:active {
-    fill: var(--basic-green);
-    opacity: 30%;
-  }
+.social__logo:focus {
+  fill: var(--basic-green);
+  outline: none;
+}
+
+.social__logo:active {
+  fill: var(--basic-green);
+  opacity: 30%;
 }
