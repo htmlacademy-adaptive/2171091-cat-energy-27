@@ -1,0 +1,50 @@
+.control {
+  position: relative;
+}
+
+.control__radio {
+  top: -2px;
+  left: -40px;
+  position: absolute;
+  background-color: var(--basic-white);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #CDCDCD;
+
+
+}
+
+.control__checkbox {
+  top: -2px;
+  left: -35px;
+  position: absolute;
+  background-color: var(--basic-white);
+  width: 25px;
+  height: 25px;
+  border: 1px solid #CDCDCD;
+}
+
+.control__input[type="radio"]:checked + .control__radio::before {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--basic-green);
+  content: "";
+}
+
+.control__input[type="checkbox"]:checked + .control__checkbox::before {
+  position: absolute;
+  background-image: url("../img/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  content: "";
+}
+

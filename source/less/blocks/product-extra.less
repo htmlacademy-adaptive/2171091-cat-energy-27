@@ -1,17 +1,94 @@
+.product-extra__line-container {
+  position: relative;
+  z-index: 0;
+}
+
+.product-extra__line-container::before {
+  top: 50%;
+  right: 0;
+  position: absolute;
+  content: "";
+  background-color: var(--basic-green);
+  width: 1000%;
+  height: 2px;
+  z-index: -1;
+}
+
 .product-extra__header {
   color: var(--basic-black);
   font-family: "Oswald";
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  margin: 25px 0 36px 0;
+  background-color: var(--basic-white);
+  padding-left: 20px;
+  padding-right: 21px;
+  width: fit-content;
+  @media (min-width: @tablet-width) {
+    margin: 25px 0 36px 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 25px 0 36px 70px;
+  }
 }
+
+.product-extra__wraper {
+  padding: 0 20px 0 20px;
+  @media (min-width: @tablet-width) {
+    padding: 0 31px 0 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 81px 110px 86px 110px;
+  }
+}
+
 .product-extra__list {
   list-style-type: none;
+  margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid #CDCDCD;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }
 
 .product-extra__item {
-  outline: auto;
+  display: grid;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  border-top: 1px solid #CDCDCD;
+  border-bottom: 1px solid #CDCDCD;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    border-top: none;
+    padding: 26px 38px 28px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 26px 38px 28px 38px;
+    border-top: 1px solid #CDCDCD;
+    border-bottom: 1px solid #CDCDCD;
+    gap: 10px;
+    padding: 15px 0 17px 0;
+    align-items: center;
+  }
 }
 
 .product-extra__name {
@@ -21,8 +98,41 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+  margin: 0;
+  padding-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .product-extra__features {
   line-height: 14px;
+  margin: 0;
+  padding-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.product-extra__button {
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3 / 3;
+  }
 }

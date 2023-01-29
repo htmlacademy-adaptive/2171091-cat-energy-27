@@ -1,0 +1,48 @@
+.user-comment {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-comment__textarea {
+  margin: 38px 20px 27px 20px;
+  padding: 10px 15px;
+  color: var(--basic-dark-grey);
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  border: none;
+  outline: var(--input) 1px solid;
+  min-height: 150px;
+  resize: none;
+
+  &:hover {
+    outline: var(--input-hover) 1px solid;
+  }
+
+  &:focus {
+    outline: var(--input-focus) 2px solid;
+  }
+
+  &:invalid {
+    outline: var(--input-error) 2px solid;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .user-comment__textarea {
+    padding: 10px 19px;
+    margin: 76px 67px 65px 70px;
+    min-height: 174px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-comment__textarea {
+    padding: 10px 19px;
+    margin: 76px 110px 67px 110px;
+    min-height: 174px;
+  }
+}
